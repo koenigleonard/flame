@@ -1,0 +1,35 @@
+# project folders
+processed_data/
+output/
+.venv_hep_foundation_model/
+core.*
+logs/
+classification/plots/
+loss_curves/plots/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# virtualenvs
+env/
+venv/
+.venv/
+
+# Condor / job files
+*.sub
+*.submit
+*.condor
+*.condor.submit
+*.condorlog
+*.out
+*.err
+*.log
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
