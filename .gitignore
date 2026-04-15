@@ -27,6 +27,7 @@ venv/
 *.out
 *.err
 *.log
+condor_*.*
 
 # OS / editor
 .DS_Store
