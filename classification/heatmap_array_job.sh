@@ -25,7 +25,7 @@ TRAINING_PATH="${BASE}/training/${TRAININGS_RUN}"
 DATA_PATH="${BASE}"
 OUTPUT_PATH="${BASE}/classification/${TRAININGS_RUN}"
 
-SAMPLED_DIR="${BASE}/sampled_jets"
+SAMPLED_DIR="${BASE}/sampled_jets/${TRAININGS_RUN}"
 
 EPOCHS=(2 4 6 8 10)
 N=${#EPOCHS[@]}
