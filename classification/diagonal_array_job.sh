@@ -1,10 +1,10 @@
 #!/usr/bin/bash
 
 #SBATCH --ntasks=1
-#SBATCH --time=00:01:00
+#SBATCH --time=00:02:00
 #SBATCH --job-name=diagonal_array
 #SBATCH --output=logs/%x_%A_%a.out
-#SBATCH --account=rwth0934
+#SBATCH --account=thes2215
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=4
 #SBATCH -p c23g
@@ -17,7 +17,7 @@ module purge
 module load CUDA
 module load intel
 
-TRAININGS_RUN="600000_overfitting"
+TRAININGS_RUN="600000_no_overfitting"
 
 BASE="/hpcwork/rwth0934/hep_foundation_model"
 
@@ -25,7 +25,7 @@ TRAINING_PATH="${BASE}/training/${TRAININGS_RUN}"
 DATA_PATH="${BASE}"
 OUTPUT_PATH="${BASE}/classification/${TRAININGS_RUN}"
 
-SAMPLED_DIR="${BASE}/sampled_jets"
+SAMPLED_DIR="${BASE}/sampled_jets/${TRAININGS_RUN}"
 
 EPOCHS=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)
 N=${#EPOCHS[@]}

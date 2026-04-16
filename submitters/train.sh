@@ -24,19 +24,19 @@ module load intel
 #---- create log dir
 mkdir -p logs
 
-RUN_NAME="600000_overfitting"
+RUN_NAME="600000_no_overfitting_500_bs"
 
-SCHEDULER=cosine
+SCHEDULER=warmup_cosine
 N_JETS=600000
 N_JETS_VAL=200000
 NUM_CONST=50
-NUM_EPOCHS=25
-BATCH_SIZE=100
-BATCH_SIZE_VAL=100
+NUM_EPOCHS=20
+BATCH_SIZE=500
+BATCH_SIZE_VAL=500
 LR=0.001
 LR_MIN=1e-6
 DROPOUT=0.0
-WEIGHT_DECAY=0.0
+WEIGHT_DECAY=0.00001
 
 # # classes to train
 classes=("TTBar" "QCD")
