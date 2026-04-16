@@ -47,7 +47,7 @@ def parse_inputs():
     parser.add_argument('--batch_size', type=int, default=100, help='Batch size for training.')
     parser.add_argument('--batch_size_val', type=int, default=100, help='Batch size for validation.')
     parser.add_argument('--num_epochs', type=int, default=20, help='Number of epochs for training.')
-    parser.add_argument('--scheduler', type = str, default = "constant", choices = ["constant", "cosine", "lambda", "cosine_restarts", "exp"], help = "Learning rate scheduler to use during training.")
+    parser.add_argument('--scheduler', type = str, default = "constant", choices = ["constant", "cosine", "lambda", "cosine_restarts", "exp", "warmup_cosine"], help = "Learning rate scheduler to use during training.")
     parser.add_argument('--lr', type=float, default=1e-3, help='Learning rate.')
     parser.add_argument('--lr_min', type=float, default=1e-6, help='Minimum learning rate.')
     parser.add_argument('--weight_decay', type=float, default=1e-5, help='Weight decay for the optimizer.')
